@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliciousBites - Online Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">🍔 DeliciousBites</div>
+        <nav>
+            <a href="#menu">Menu</a>
+            <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Delicious Food Delivered To Your Doorstep</h1>
+        <p>Fresh, hot, and ready to eat.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-container">
+        <h2>Our Menu</h2>
+        <div class="food-grid" id="food-grid">
+            <!-- Dynamically populated or static cards -->
+            <div class="food-card">
+                <img src="burger.jpg" alt="Cheese Burger">
+                <h3>Cheese Burger</h3>
+                <p>Juicy beef patty with extra melted cheddar cheese.</p>
+                <span class="price">$8.99</span>
+                <button onclick="addToCart('Cheese Burger', 8.99)">Add to Cart</button>
+            </div>
+            <div class="food-card">
+                <img src="pizza.jpg" alt="Pepperoni Pizza">
+                <h3>Pepperoni Pizza</h3>
+                <p>Classic wood-fired pizza with loaded pepperoni.</p>
+                <span class="price">$12.99</span>
+                <button onclick="addToCart('Pepperoni Pizza', 12.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: $<span id="cart-total-price">0.00</span></h3>
+            <button onclick="checkout()" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
